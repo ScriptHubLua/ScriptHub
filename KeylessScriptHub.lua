@@ -1,9 +1,7 @@
--- Fancy GUI with Dragging and Effects by ChatGPT
 
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
 
--- Створення GUI
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -17,19 +15,17 @@ local Sound = Instance.new("Sound")
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
--- Основний Frame
 Frame.Parent = ScreenGui
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
-Frame.Size = UDim2.new(0, 0, 0, 0) -- анімація появи
+Frame.Size = UDim2.new(0, 0, 0, 0) 
 Frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 Frame.Active = true
-Frame.Draggable = true -- зробити перетягуваним
+Frame.Draggable = true 
 
 UICorner.CornerRadius = UDim.new(0, 12)
 UICorner.Parent = Frame
 
--- Градієнт
 Gradient.Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0.0, Color3.fromRGB(25, 25, 25)),
 	ColorSequenceKeypoint.new(1.0, Color3.fromRGB(10, 10, 10))
@@ -37,12 +33,10 @@ Gradient.Color = ColorSequence.new{
 Gradient.Rotation = 45
 Gradient.Parent = Frame
 
--- Анімація появи
 TweenService:Create(Frame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 	Size = UDim2.new(0, 500, 0, 270)
 }):Play()
 
--- Текст
 TextLabel.Parent = Frame
 TextLabel.Text = "This script is outdated,\ndownload the new version of the script,\nclick on the Copy Link button, and you will get a copy of the link\nand need to paste it into your browser and download the new version"
 TextLabel.Size = UDim2.new(1, -40, 0.7, 0)
@@ -52,7 +46,6 @@ TextLabel.TextWrapped = true
 TextLabel.TextScaled = true
 TextLabel.Font = Enum.Font.GothamMedium
 
--- Тінь під кнопкою
 ButtonShadow.Name = "ButtonShadow"
 ButtonShadow.Parent = Frame
 ButtonShadow.BackgroundTransparency = 1
@@ -63,7 +56,6 @@ ButtonShadow.ImageTransparency = 0.5
 ButtonShadow.ScaleType = Enum.ScaleType.Slice
 ButtonShadow.SliceCenter = Rect.new(10, 10, 118, 118)
 
--- Кнопка
 CopyButton.Parent = Frame
 CopyButton.Text = "Copy Link"
 CopyButton.Size = UDim2.new(0.4, 0, 0.15, 0)
@@ -76,7 +68,6 @@ CopyButton.TextScaled = true
 ButtonCorner.CornerRadius = UDim.new(0, 8)
 ButtonCorner.Parent = CopyButton
 
--- Звук натискання
 Sound.SoundId = "rbxassetid://12222030"
 Sound.Volume = 0.5
 Sound.Parent = CopyButton
@@ -89,7 +80,6 @@ CopyButton.MouseButton1Click:Connect(function()
     CopyButton.Text = "Copy Link"
 end)
 
--- Анімації наведення
 local hoverIn = TweenService:Create(CopyButton, TweenInfo.new(0.2), {
 	BackgroundColor3 = Color3.fromRGB(65, 65, 65),
 	Size = UDim2.new(0.42, 0, 0.17, 0),
