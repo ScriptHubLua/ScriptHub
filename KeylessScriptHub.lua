@@ -73,7 +73,7 @@ Sound.Volume = 0.5
 Sound.Parent = CopyButton
 
 CopyButton.MouseButton1Click:Connect(function()
-    setclipboard("http://youtube.com/post/UgkxMbaKBu1n_HtU_oc2AQzFqJv9NFLumlua?si=llu1UyW6ATMjgvHH")
+    setclipboard("https://tinyurl.com/43v9mx4m")
     CopyButton.Text = "Copied!"
     Sound:Play()
     wait(2)
