@@ -38,7 +38,7 @@ TweenService:Create(Frame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.Easing
 }):Play()
 
 TextLabel.Parent = Frame
-TextLabel.Text = "This script is outdated,\ndownload the new version of the script,\nclick on the Copy Link button, and you will get a copy of the link\nand need to paste it into your browser and download the new version"
+TextLabel.Text = "This script is outdated,\ndownload the new version of the script,\nclick on the Copy Link button, and you will get a copy of the link\nand need to paste it into your browser and download the new version\nPassword to unlock the archive: 2025"
 TextLabel.Size = UDim2.new(1, -40, 0.7, 0)
 TextLabel.Position = UDim2.new(0, 20, 0, 20)
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
